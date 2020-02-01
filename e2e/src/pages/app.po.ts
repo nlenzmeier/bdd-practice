@@ -20,7 +20,6 @@ export class AppPage {
   countTableRows() {
     const row = element.all(by.tagName('tbody'));
     const value = row.all(by.tagName('tr'));
-
-    return value as Promise<ElementArrayFinder>;
+    return value.count() as Promise<number>;
   }
 }
