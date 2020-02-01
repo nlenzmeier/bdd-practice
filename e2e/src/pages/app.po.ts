@@ -16,4 +16,11 @@ export class AppPage {
   getDisplayMessage() {
     return element(by.className('display')).getText() as Promise<string>;
   }
+
+  countTableRows() {
+    const row = element.all(by.tagName('tbody'));
+    const value = row.all(by.tagName('tr'));
+
+    return value as Promise<ElementArrayFinder>;
+  }
 }

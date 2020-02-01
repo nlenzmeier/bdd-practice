@@ -26,3 +26,7 @@ Given(/^I click the Display Text button$/, async () => {
 Then(/^I should see Hi there!$/, async () => {
   expect(await page.getDisplayMessage()).to.equal('Hi there!');
 });
+
+Then(/^I should see a table with multiple rows$/ async () => {
+  expect(await page.countTableRows()).to.be.greaterThan(1);
+});

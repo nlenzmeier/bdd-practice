@@ -12,3 +12,7 @@ Feature: Go to Home Page
     Given I click the Display Text button
     Then I should see Hi there!
 
+  Scenario:
+    Given I do nothing
+    Then I should see a table with multiple rows
+
