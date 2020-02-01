@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bdd-test';
+  clickMessage: string;
+
+  public displayText() {
+    this.clickMessage = 'Hi there!';
+  }
 }
