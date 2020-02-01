@@ -3,3 +3,20 @@
   <button (click)="displayText()">Display Text</button>
   <div class="display">{{ clickMessage }}</div>
 </div>
+
+<br>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>State</th>
+    <th>Favorite color</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let person of people">
+      <td>{{person.name}}</td>
+      <td>{{person.state}}</td>
+      <td>{{person.favoriteColor}}</td>
+    </tr>
+  </tbody>
+</table>

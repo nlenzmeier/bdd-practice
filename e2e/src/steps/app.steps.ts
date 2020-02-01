@@ -13,16 +13,16 @@ Given(/^I am on the home page$/, async () => {
   await page.navigateTo();
 });
 
-When(/^I do nothing$/, () => {});
+Given(/^I do nothing$/, () => {});
 
 Then(/^I should see the title$/, async () => {
   expect(await page.getTitleText()).to.equal('BDD Test');
 });
 
-When(/^I click the Display Text button$/, async () => {
+Given(/^I click the Display Text button$/, async () => {
   await page.clickButton();
 });
 
 Then(/^I should see Hi there!$/, async () => {
   expect(await page.getDisplayMessage()).to.equal('Hi there!');
-})
+});
