@@ -24,5 +24,5 @@ Feature: Go to Home Page
     Examples:
     | linkOption | site                                  |
     | Google     | https://www.google.com/               |
-    | Apple      | https://www.apple.com/                 |
+    | Apple      | https://www.apple.com/                |
     | Samsung    | https://www.samsung.com/us/1/         |
