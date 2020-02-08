@@ -16,15 +16,13 @@ Feature: Go to Home Page
     Given I do nothing
     Then I should see a table with multiple rows
 
-  Scenario:
+  Scenario Outline: I click links
     Given I do nothing
-    When I click <linkOpion>
-    Then I should be redirected to <site>
+    When I press <linkOption>
+    Then I should be directed to <site> in a new tab
 
+    Examples:
     | linkOption | site                                  |
-    | Google     | https://www.google.com/?client=safari |
-    | Apple      | https://www.apple.com                 |
+    | Google     | https://www.google.com/               |
+    | Apple      | https://www.apple.com/                 |
     | Samsung    | https://www.samsung.com/us/1/         |
-
-
-

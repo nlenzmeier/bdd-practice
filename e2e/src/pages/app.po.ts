@@ -22,4 +22,16 @@ export class AppPage {
     const value = row.all(by.tagName('tr'));
     return value.count() as Promise<number>;
   }
+
+  redirect() {
+    browser.getAllWindowHandles().then((handles: string[]) => {
+      browser.switchTo().window(handles[(handles.length) - 1]).then(() => {
+      });
+    });
+  }
+
+  clickInputtedLink(linkOption: string) {
+    return element(by.linkText(linkOption)).click();
+  }
+
 }
